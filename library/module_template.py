@@ -64,7 +64,12 @@ changed_state:
 '''
 
 def get_item(name):
-    return True
+    item= {}
+    item['name']=name
+    item['sizeMB'] = 500 
+    item['description'] = "Simple description"
+    item['path'] = "/tmp/test/"
+    return item
 
 def create_item(name, **kwargs):
     return True
@@ -102,8 +107,8 @@ def main():
     # Manage the result, assume no changes
     result = dict(
         changed=False,
-        original_state='',
-        changed_state=''
+        original_state={},
+        changed_state={}
     )
 
     # Set the requested state
@@ -124,11 +129,9 @@ def main():
     if module.params["path"] is not None:
         path = module.params["path"]
 
-    # Change for testing
-    item_sizeMB = 200 
-    item_description = "Simple description"
-    item_path = "/tmp/test/"
     newconfs = {}
+
+    result['original_state']= get_item(name)
 
 
     # if the object exists and the 'requested_state' is 'present'
@@ -141,17 +144,21 @@ def main():
     # set 'changed' to true
     if get_item(name):
         if requested_state == "present":
+            item=get_item(name)
             if sizeMB:
-                if sizeMB != item_sizeMB:
+                if sizeMB != item['sizeMB']:
                     newconfs['sizeMB'] = sizeMB
+                    result['changed_state'] = newconfs
                     result['changed'] = True
             if description:
-                if description != item_description:
+                if description != item['description']:
                     newconfs['description'] = description
+                    result['changed_state'] = newconfs
                     result['changed'] = True
             if path:
-                if path != item_path:
+                if path != item['path']:
                     newconfs['path'] = path
+                    result['changed_state'] = newconfs
                     result['changed'] = True
         else:
             result['changed'] = True
