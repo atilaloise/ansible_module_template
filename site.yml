@@ -1,0 +1,14 @@
+---
+
+- hosts: splunk
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: Creates a custom configured item
+    my_module:
+        name: test_item
+        description: Simple item
+        sizeMB: 800
+        path: /opt/items/test_item
+        state: present
