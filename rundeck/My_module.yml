@@ -1,0 +1,56 @@
+- defaultTab: nodes
+  description: |-
+    .
+    # ROda o playbook local usando my_module
+  executionEnabled: true
+  id: bab6c0fe-c826-4f6b-8259-7b56989ba6d9
+  loglevel: INFO
+  name: My_module
+  nodeFilterEditable: false
+  options:
+  - description: caminho local para fazer o git clone
+    name: PATH_LOCAL
+    value: /var/lib/rundeck/.ansible/playbooks
+  - description: Endereço do repo
+    label: Repositorio
+    name: REPO
+    value: https://github.com/atilaloise/ansible_module_template.git
+  - name: VERSAO
+    value: main
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - description: Baixando projeto do playbook
+      script: |-
+        #!/bin/bash
+        echo "path local"
+        echo $RD_OPTION_PATH_LOCAL
+        echo ""
+        echo "Versao"
+        echo $RD_OPTION_VERSAO
+
+        echo ""
+        echo "repo"
+        echo $RD_OPTION_REPO
+
+        git config --global http.sslVerify false
+
+        [ ! -d $RD_OPTION_PATH_LOCAL ] && mkdir -p $RD_OPTION_PATH_LOCAL
+
+        REPO_FILE=${RD_OPTION_REPO##*/}
+        FOLDER=${REPO_FILE%.*}
+
+        cd $RD_OPTION_PATH_LOCAL && rm -rf $FOLDER && \
+        git clone --branch $RD_OPTION_VERSAO $RD_OPTION_REPO
+    - configuration:
+        ansible-become: 'false'
+        ansible-playbook: /var/lib/rundeck/.ansible/playbooks/ansible_module_template/site.yml
+        ansible-ssh-passphrase-option: option.password
+        ansible-ssh-use-agent: 'false'
+      nodeStep: true
+      type: com.batix.rundeck.plugins.AnsiblePlaybookWorflowNodeStep
+    keepgoing: false
+    strategy: node-first
+  uuid: bab6c0fe-c826-4f6b-8259-7b56989ba6d9
