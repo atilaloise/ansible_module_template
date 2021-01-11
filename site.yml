@@ -7,8 +7,8 @@
   tasks:
   - name: Creates a custom configured item
     my_module:
-        name: test_item
-        description: Simple item
-        sizeMB: 800
-        path: /opt/items/test_item
+        name: "{{ item_name }}"
+        description: "{{ item_description }}"
+        sizeMB: "{{ item_sizeMB }}"
+        path: "{{ item_path }}"
         state: present

@@ -1,0 +1,4 @@
+item_name: my_item
+item_description: Simple item
+item_sizeMB: 800
+item_path: /opt/items/test_item
