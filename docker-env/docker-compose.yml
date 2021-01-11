@@ -22,13 +22,5 @@ services:
         - RUNDECK_PASSWORD=rundeck
         - DATABASE_ADMIN_USER=root
         - DATABASE_ADMIN_PASSWORD=rundeck
-      volumes:
-        - ./rundeck/var/lib/rundeck/var/storage:/var/lib/rundeck/var/storage
-        - ./rundeck/opt/rundeck-plugins:/opt/rundeck-plugins
-        - ./rundeck/var/rundeck:/var/rundeck
-        - ./rundeck/var/lib/rundeck/.ssh:/var/lib/rundeck/.ssh
-        - ./rundeck/etc/rundeck:/etc/rundeck
-        - ./ssh_keys:/tmp/rundeck/ssh
-        - ./acls:/tmp/rundeck/ACLS
       ports:
         - "4440:4440"
