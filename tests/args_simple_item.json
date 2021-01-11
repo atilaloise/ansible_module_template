@@ -1,0 +1,9 @@
+{
+    "ANSIBLE_MODULE_ARGS": {
+        "name": "item_1",
+        "description": "Simple description",
+        "path": "/tmp/item1/",
+        "sizeMB": "500",
+        "state": "absent"
+    }
+}
