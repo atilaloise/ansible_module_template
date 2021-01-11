@@ -8,14 +8,37 @@
   name: My_module
   nodeFilterEditable: false
   options:
+  - description: '**O nome desejado para o item**'
+    label: Nome do Item
+    name: item_name
+    required: true
+  - label: Descrição do item
+    name: item_decription
+    required: true
+  - label: Tamanho do item em Megabytes
+    name: Item_sizeMB
+    value: '100'
+  - description: |-
+      **ATENÇÃO**
+
+      O path já deve existir
+    label: Path onde o item será criado
+    name: item_path
+    value: /tmp/
   - description: caminho local para fazer o git clone
+    hidden: true
     name: PATH_LOCAL
+    required: true
     value: /var/lib/rundeck/.ansible/playbooks
   - description: Endereço do repo
+    hidden: true
     label: Repositorio
     name: REPO
+    required: true
     value: https://github.com/atilaloise/ansible_module_template.git
-  - name: VERSAO
+  - hidden: true
+    name: VERSAO
+    required: true
     value: main
   plugins:
     ExecutionLifecycle: null
@@ -46,6 +69,11 @@
         git clone --branch $RD_OPTION_VERSAO $RD_OPTION_REPO
     - configuration:
         ansible-become: 'false'
+        ansible-extra-vars: |-
+          item_name: ${option.item_name}
+          item_description: ${option.item_decription}
+          item_sizeMB: ${option.Item_sizeMB}
+          item_path: ${option.item_path}
         ansible-playbook: /var/lib/rundeck/.ansible/playbooks/ansible_module_template/site.yml
         ansible-ssh-passphrase-option: option.password
         ansible-ssh-use-agent: 'false'
