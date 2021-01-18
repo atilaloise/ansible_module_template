@@ -10,9 +10,9 @@ Simples, você precisa entregar mais do que geralmente 3 ou 4 pessoas entregaria
 
 Bom, não se iluda. O esforço é enorme principalmente no começo. Mas eu de garanto que você vai ser capaz de, em um único esforço (que tende a diminuir a cada nova experiência) entregar soluções que podem escalar de acordo com a demanda do seu local de trabalho.
 
-Nessa jornada vamos falar de 3 ferramentas básicas. Python, Shell Script, Ansible e Rundeck. 
+Nessa jornada vamos falar de 3 ferramentas básicas. Python, Ansible e Rundeck. 
 
-Claro que nosso pack de ferramentas pode ser muito maior que isso. Golang, Powershell, puppet, Salt e muitas outras linguagens e ferramentas são grandes aliadas no processo de evolução.
+Claro que nosso pack de ferramentas pode ser muito maior que isso. Shell Script, Golang, Powershell, puppet, Salt e muitas outras linguagens e ferramentas são grandes aliadas no processo de evolução.
 
 Pelo seu bem e pelo bem da empresa onde você trabalha, não se limite a ferramenta x ou y, muito menos insista em reinventar a roda. Pesquise por ferramentas que te ajudem a solucionar problemas específicos com menos esforço. Estude muito e trabalhe de forma inteligente, essa é a combinação imbatível.
 
@@ -22,11 +22,9 @@ Se tem uma coisa que um profissional de alto desempenho detesta, é trabalho rep
 
 E assim segue a vida... Os mesmos problemas, e o loop frustrante da recorrência.
 
-Mas aí quando um pouco de energia mesmo após um esgotamento absurdo causado por essa rotina, me vem um pensamento..
-
 Afinal, se é repetitivo, é automatizável. Agrega-se muito mais valor organizando esse fluxo e quebrando cabeça para aprender e utilizar ferramentas que façam a parte repetitiva por mim, aliás, por todos.
 
-É disso que se trata tudo isso que falamos de SRE, DevOps, DataOPs, e tudoOps mais que vai surgindo a cada dia que passa. Se eu tenho que executar um trabalho repetitivo, com os mesmos passos e as mesmas variáveis, então temos um problema grave, que vai ter consequências muito piores quando alguém errar um desses passos. 
+É disso que se trata tudo isso que falamos de SRE, DevOps, DataOPs, e tudoOps mais que vai surgindo a cada dia que passa. Se eu tenho que executar um trabalho, com os mesmos passos e as mesmas variáveis, então temos um problema grave, que vai ter consequências muito piores quando alguém errar um desses passos. 
 
 Além do mais, desperdício de recursos é sinônimo de prejuízo! Se o recurso desperdiçado é humano então...
 
@@ -38,7 +36,7 @@ Além do mais, desperdício de recursos é sinônimo de prejuízo! Se o recurso 
 
 ## SRE Anti-pattern**(s):**
 
-> **One tool/language to rule then all:** É provável que você ande escutando muito essa de "Vamos padronizar tudo em uma ferramenta só". Mas a realidade é que isso não é lá muito prático, na verdade, na maioria das vezes é impossível mesmo.
+> **One tool/language to rule them all:** É provável que você ande escutando muito essa de "Vamos padronizar tudo em uma ferramenta só". Mas a realidade é que isso não é lá muito prático, na verdade, na maioria das vezes é impossível mesmo.
 As razões que levam a escolha de uma ferramenta vão do momento profissional do colaborador e experiências anteriores, até o tipo de tarefa a ser executada.
 
 > **"Do it. Do it again. Then do it again":** Executar procedimentos corretivos, não aprender com problemas que demandaram essas atividades e ainda torná-los parte da sua rotina é sem dúvida o primeiro passo para perder-se o foco no cliente e imergir em incêndios diários que precisam ser apagados e impedem ciclos de melhoria contínua.
