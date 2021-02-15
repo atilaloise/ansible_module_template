@@ -8,17 +8,19 @@ Pois bem, na prática o que isso quer dizer?
 
 Simples, você precisa entregar mais do que geralmente 3 ou 4 pessoas entregariam, em menos tempo, e claro, com menos esforço.
 
-Bom, não se iluda. O esforço é enorme principalmente no começo. Mas eu de garanto que você vai ser capaz de, em um único esforço (que tende a diminuir a cada nova experiência) entregar soluções que podem escalar de acordo com a demanda do seu local de trabalho.
+Claro que o esforço de aprendizado é enorme, principalmente no começo, mas eu de garanto que você vai ser capaz de em um único esforço (que tende a diminuir a cada nova experiência) entregar soluções que podem escalar de acordo com a demanda do seu local de trabalho.
 
-Nessa jornada vamos falar de 3 ferramentas básicas. Python, Ansible e Rundeck. 
+Isso porque depois da entrega das suas soluções, seus colegas de trabalho, clientes e até você mesmo, passarão a utilizar isso como autosserviço.
 
-Claro que nosso pack de ferramentas pode ser muito maior que isso. Shell Script, Golang, Powershell, puppet, Salt e muitas outras linguagens e ferramentas são grandes aliadas no processo de evolução.
+Para que isso aconteça, nessa jornada vamos falar de 3 ferramentas básicas. Python, Ansible e Rundeck. 
 
-Pelo seu bem e pelo bem da empresa onde você trabalha, não se limite a ferramenta x ou y, muito menos insista em reinventar a roda. Pesquise por ferramentas que te ajudem a solucionar problemas específicos com menos esforço. Estude muito e trabalhe de forma inteligente, essa é a combinação imbatível.
+Apenas essas três por questões de tempo dessa talk. Claro que nosso pack de ferramentas pode ser muito maior que isso. Shell Script, Golang, Powershell, puppet, Salt e muitas outras linguagens e ferramentas são grandes aliadas no processo de evolução.
+
+Pelo seu bem e pelo bem da empresa onde você trabalha, não se limite a ferramenta x ou y, muito menos insista em reinventar a roda. Pesquise por ferramentas que te ajudem a solucionar problemas específicos com menos esforço. Estude muito e trabalhe de forma inteligente com esforço focado, essa é a combinação imbatível.
 
 # 📜 Automação é a lei
 
-Se tem uma coisa que um profissional de alto desempenho detesta, é trabalho repetitivo. Vejo muitos caras de altíssimo nível, extremamente infelizes com sua rotina de trabalho, onde suas capacidades excepcionais de raciocínio e resolução de problemas são deixadas de lado para fazer volume na execução de procedimentos padronizados(ou não) que objetivam uma satisfação a curtíssimo prazo.
+Se tem uma coisa que um profissional de alto desempenho detesta, é trabalho repetitivo. Vejo muitos caras de altíssimo nível, extremamente infelizes com sua rotina de trabalho, onde suas capacidades excepcionais de raciocínio e resolução de problemas são deixadas de lado para fazer volume na execução de procedimentos padronizados(ou não, se vira aí) que objetivam uma satisfação a curtíssimo prazo.
 
 E assim segue a vida... Os mesmos problemas, e o loop frustrante da recorrência.
 
@@ -26,9 +28,12 @@ Afinal, se é repetitivo, é automatizável. Agrega-se muito mais valor organiza
 
 É disso que se trata tudo isso que falamos de SRE, DevOps, DataOPs, e tudoOps mais que vai surgindo a cada dia que passa. Se eu tenho que executar um trabalho, com os mesmos passos e as mesmas variáveis, então temos um problema grave, que vai ter consequências muito piores quando alguém errar um desses passos. 
 
+Em resumo, vale muito mais a pena gastar 1 semana automatizando determinadas tarefas que consomem horas de trabalho. Após este processo, essas mesmas tarefas podem ser entregues em apenas alguns segundos. 
+
 Além do mais, desperdício de recursos é sinônimo de prejuízo! Se o recurso desperdiçado é humano então...
 
 # 🗝 Multi Culture - Pelo bem de todos!
+
 
 ## No LOCK**(s):**
 

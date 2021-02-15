@@ -1,6 +1,6 @@
 - defaultTab: nodes
   description: |-
-    .
+    .ROda o playbook local usando my_module
     # ROda o playbook local usando my_module
   executionEnabled: true
   id: bab6c0fe-c826-4f6b-8259-7b56989ba6d9

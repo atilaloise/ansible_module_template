@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "76c6a6a0-64dd-4c9a-bb50-ee354f897502",
+		"name": "RUNDECK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtem lista de jobs do projeto",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Rundeck-Auth-Token",
+						"value": "9xQAoUtikx7mpIc9LYZ6YzQh23yshzdi",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4440/api/21/project/self_service_XPTO/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4440",
+					"path": [
+						"api",
+						"21",
+						"project",
+						"self_service_XPTO",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Executa job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Rundeck-Auth-Token",
+						"value": "9xQAoUtikx7mpIc9LYZ6YzQh23yshzdi",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"options\": {\n        \"item_name\":\"TesteAPI\",\n        \"item_decription\": \"Um pequeno teste\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4440/api/21/job/bab6c0fe-c826-4f6b-8259-7b56989ba6d9/run",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4440",
+					"path": [
+						"api",
+						"21",
+						"job",
+						"bab6c0fe-c826-4f6b-8259-7b56989ba6d9",
+						"run"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
