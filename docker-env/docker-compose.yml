@@ -16,11 +16,29 @@ services:
       depends_on:
         - "db"
       environment:
-        - RUNDECK_ADMIN_PASSWORD=superp4ss
+        - EXTERNAL_SERVER_URL=http://localhost:4440
+        - RUNDECK_ADMIN_PASSWORD=admin
         - DATABASE_URL=jdbc:mysql://db/rundeck?autoReconnect=true
         - RUNDECK_USER=rundeck
         - RUNDECK_PASSWORD=rundeck
         - DATABASE_ADMIN_USER=root
         - DATABASE_ADMIN_PASSWORD=rundeck
+        - RUNDECK_PROJECT_STORAGE_TYPE=db
+        - RUNDECK_STORAGE_PROVIDER=db
+      volumes:
+        - ./rundeck/var/lib/rundeck/var/storage:/var/lib/rundeck/var/storage
+        - ./rundeck/opt/rundeck-plugins:/opt/rundeck-plugins
+        - ./rundeck/var/rundeck:/var/rundeck
+        - ./rundeck/var/lib/rundeck/.ssh:/var/lib/rundeck/.ssh
+        - ./rundeck/etc/rundeck:/etc/rundeck
+        - ./ssh_keys:/tmp/rundeck/ssh
+        - ./acls:/tmp/rundeck/ACLS
       ports:
         - "4440:4440"
+  jirasd:
+    image: cptactionhank/atlassian-jira-service-desk:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./jira:/var/atlassian/jira
+      - ./jiralogs/:/opt/atlassian/jira/logs

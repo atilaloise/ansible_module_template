@@ -50,7 +50,7 @@ EXAMPLES = '''
 - name: Ensure item is absent
   my_module:
       name: test_item
-      state: present
+      state: absent
 
 '''
 

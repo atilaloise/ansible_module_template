@@ -4,6 +4,6 @@
         "description": "Simple description",
         "path": "/tmp/item1/",
         "sizeMB": "500",
-        "state": "absent"
+        "state": "present"
     }
 }

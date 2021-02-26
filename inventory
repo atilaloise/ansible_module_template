@@ -1,2 +1,2 @@
 [local]
-127.0.0.1 ansible_connection=local ansible_python_interpreter=/usr/local/bin/python3.9 item_name=my_item item_description="Simple item" item_sizeMB=800 item_path="/opt/items/test_item"
+127.0.0.1 ansible_connection=local  item_name=my_item item_description="Simple item" item_sizeMB=800 item_path="/opt/items/test_item"
